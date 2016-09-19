@@ -1,0 +1,48 @@
+$container-width: 1120px;
+$container-padding: 15px;
+$container-padding-narrow: 10px;
+$gutter-width: 30px;
+$gutter-width-narrow: 15px;
+$vertical-space-unit: 15px;
+
+$colours: (
+  'dark-grey': #333333,
+  'mid-grey': #cbc6c3,
+  'light-grey': #e5e5e5,
+  'white': #fff,
+  'black': #000
+);
+
+$breakpoints: (
+  'xxxlarge': 1260px,
+  'xxlarge': 1000px,
+  'xlarge': 900px,
+  'large': 850px,
+  'medium': 700px,
+  'small': 600px,
+  'xsmall': 480px
+);
+
+$font-families: (
+  'helvetica': ('helvetica neue' helvetica, Arial, sans-serif)
+);
+
+$font-weights: (
+  'ultra-bold': (900),
+  'bold': (700),
+  'regular': (400),
+  'light': (300)
+);
+
+$font-sizes: (
+  'xsmall': (font-size: 14, line-height: 1.333),
+  'small': (font-size: 18, line-height: 1.8),
+  'medium': (font-size: 24, line-height: 1.4),
+  'large': (font-size: 30, line-height: 1.25),
+  'xlarge': (font-size: 34, line-height: 1.2),
+  'xxlarge': (font-size: 39, line-height: 1.1)
+);
+
+// Empty map for respond-to mixin
+// Override in component Sass files
+$tweakpoints: ();

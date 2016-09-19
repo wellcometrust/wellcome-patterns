@@ -1,0 +1,133 @@
+.styleguide {
+  position: relative;
+  height: 100%;
+}
+
+.styleguide__heading {
+  line-height: 1;
+  padding: 15px;
+  margin-bottom: .5em;
+}
+
+.styleguide__subheading {
+  cursor: pointer;
+  position: relative;
+  margin-left: .8em;
+  font-weight: 500;
+  font-size: .8em;
+  text-transform: uppercase;
+  margin-bottom: .8em;
+}
+
+.styleguide__chevron {
+  position: relative;
+  top: .2em;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  transition: transform 200ms ease;
+
+  .styleguide__section.is-active & {
+    transform: rotate(90deg);
+  }
+}
+
+.styleguide__main {
+  padding: 55px 15px 15px;
+  position: absolute;
+  left: 270px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: colour('white');
+  transition: left 200ms ease;
+  border-left: 1px solid #f5f5f5;
+
+  &--is-fullscreen {
+    left: 0;
+  }
+}
+
+.styleguide__top-nav {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 30px;
+  border-bottom: 1px solid #eee;
+  right: 0;
+}
+
+.styleguide__menu {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 4px;
+    margin-bottom: 3px;
+    background: colour('light-grey');
+    transition: background 200ms ease;
+  }
+
+  &:hover span {
+    background: colour('dark-grey');
+  }
+}
+
+.styleguide__sidebar {
+  background: #fafafa;
+  top: 0;
+  bottom: 0;
+  width: 270px;
+  position: absolute;
+  overflow-y: auto;
+}
+
+.styleguide__list {
+  list-style: none;
+  display: none;
+
+  .styleguide__section.is-active & {
+    display: block;
+  }
+}
+
+.styleguide__item {
+  font-size: .9em;
+  margin: 0 0 .6em 2em;
+
+  &:last-child {
+    margin-bottom: 1.6em;
+  }
+}
+
+.styleguide__link {
+  display: block;
+  text-decoration: none;
+  padding-right: 10px;
+  transition: background 600ms ease;
+  color: #555;
+  border-bottom: 0;
+  transition: color 200ms ease;
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: dodgerblue;
+  }
+}
+
+body,
+html,
+#app {
+  height: 100%;
+}
+
+#app {
+  position: relative;
+}
