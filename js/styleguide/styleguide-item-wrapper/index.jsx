@@ -31,12 +31,10 @@ const StyleguideItemWrapper = React.createClass({
       )
     }
 
-    return (
-      <div className="styleguide-item-wrapper">
-        <h2 className="styleguide-item-wrapper__item-heading">{styleguide.title}</h2>
-        <div className="styleguide-item-wrapper__component">
-          {this.props.children}
-        </div>
+    let styleguideItemDetails
+
+    if (!styleguide.hideDetails) {
+      styleguideItemDetails = (
         <div className={`styleguide-item-wrapper__details ${this.getActive()}`}>
           <div className="styleguide-item-wrapper__header" onClick={this.toggleDetails}>
             <h3 className="styleguide-item-wrapper__heading">
@@ -52,6 +50,16 @@ const StyleguideItemWrapper = React.createClass({
             {jsonSection}
           </div>
         </div>
+      )
+    }
+
+    return (
+      <div className="styleguide-item-wrapper">
+        <h2 className="styleguide-item-wrapper__item-heading">{styleguide.title}</h2>
+        <div className="styleguide-item-wrapper__component">
+          {this.props.children}
+        </div>
+        {styleguideItemDetails}
       </div>
     )
   }

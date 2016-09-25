@@ -120,7 +120,22 @@
   &.active {
     color: dodgerblue;
   }
+
+  &--standalone {
+    color: inherit;
+    margin-left: .8em;
+    font-weight: 500;
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-bottom: .8em;
+  }
 }
+
+.styleguide__standalone {
+  margin-bottom: vertical-space(2);
+}
+
+
 
 body,
 html,

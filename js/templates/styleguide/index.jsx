@@ -27,6 +27,10 @@ const Styleguide = React.createClass({
   ],
 
   getFilteredItems() {
+    if (this.props.children) {
+      return [this.props.children]
+    }
+
     const itemId = this.props.params.id
 
     if (!itemId) return this.items

@@ -29,9 +29,18 @@ const StyleguideMain = React.createClass({
           </a>
         </nav>
         {this.props.items.map((item) => {
+          const itemType = item.type
+          let itemToRender
+
+          if (itemType) {
+            itemToRender = item
+          } else {
+            itemToRender = React.createElement(item)
+          }
+
           return (
             <StyleguideItemWrapper key={item}>
-              {React.createElement(item)}
+              {itemToRender}
             </StyleguideItemWrapper>
           )
         })}
@@ -41,3 +50,4 @@ const StyleguideMain = React.createClass({
 })
 
 module.exports = StyleguideMain
+// {React.createElement(item)}
