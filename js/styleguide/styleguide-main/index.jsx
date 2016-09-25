@@ -50,4 +50,3 @@ const StyleguideMain = React.createClass({
 })
 
 module.exports = StyleguideMain
-// {React.createElement(item)}
