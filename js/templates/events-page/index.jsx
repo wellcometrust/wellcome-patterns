@@ -7,6 +7,7 @@ const EventPromo = require('../../components/event-promo/index')
 
 const EventsPage = React.createClass({
   propTypes: {
+    sideNavItems: React.PropTypes.array,
     events: React.PropTypes.array
   },
 
@@ -14,7 +15,7 @@ const EventsPage = React.createClass({
     return (
       <Layout_3_9 isNarrow>
         <LayoutColumn number="1">
-          <SideNav />
+          <SideNav items={this.props.sideNavItems} />
         </LayoutColumn>
         <LayoutColumn number="2">
           <Grid_3 isNarrow>

@@ -3,7 +3,7 @@ const EventsPage = require('./')
 const data = require('./data/default')
 
 const EventsPageExample = () => (
-  <EventsPage events={data.events} />
+  <EventsPage sideNavItems={data.sideNavItems} events={data.events} />
 )
 
 EventsPageExample.styleguide = {

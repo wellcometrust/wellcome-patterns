@@ -1,4 +1,26 @@
 {
+  "sideNavItems": [
+    {
+      "url": "#",
+      "title": "Exhibitions"
+    },
+    {
+      "url": "#",
+      "title": "Events"
+    },
+    {
+      "url": "#",
+      "title": "Reading Room"
+    },
+    {
+      "url": "#",
+      "title": "Youth and schools events"
+    },
+    {
+      "url": "#",
+      "title": "Calendar"
+    }
+  ],
   "events": [{
     "title": "Lost and Found Movements",
     "mainUrl": "#",

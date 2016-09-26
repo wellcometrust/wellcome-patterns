@@ -1,4 +1,5 @@
 const React = require('react')
+const SvgIcon = require('../../components/svg-icon/index')
 
 const StyleguideSubheading = React.createClass({
   propTypes: {
@@ -15,9 +16,7 @@ const StyleguideSubheading = React.createClass({
       <h2
         className="styleguide__subheading"
         onClick={this.toggleActive}>
-        <svg className="styleguide__chevron" aria-hidden="true">
-          <use xlinkHref="#icon-chevron"></use>
-        </svg>
+        <SvgIcon className="styleguide__chevron" name="chevron" />
         {this.props.type}
       </h2>
     )

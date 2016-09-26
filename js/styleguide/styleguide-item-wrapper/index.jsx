@@ -1,4 +1,5 @@
 const React = require('react')
+const SvgIcon = require('../../components/svg-icon/index')
 
 const StyleguideItemWrapper = React.createClass({
   propTypes: {
@@ -39,7 +40,7 @@ const StyleguideItemWrapper = React.createClass({
         <div className={`styleguide-item-wrapper__details ${this.getActive()}`}>
           <div className="styleguide-item-wrapper__header" onClick={this.toggleDetails}>
             <h3 className="styleguide-item-wrapper__heading">
-              <svg className="styleguide-item-wrapper__chevron"><use xlinkHref="#icon-chevron"></use></svg>
+              <SvgIcon className="styleguide-item-wrapper__chevron" name="chevron" />
               Details
             </h3>
           </div>
