@@ -1,47 +1,10 @@
 const React = require('react')
 const StyleguideSidebar = require('../../styleguide/styleguide-sidebar/index')
 const StyleguideMain = require('../../styleguide/styleguide-main/index')
-const EventPromoExample = require('../../components/event-promo/styleguide')
-const SampleComponentExample = require('../../components/sample-component/styleguide')
-const SideNavExample = require('../../components/side-nav/styleguide')
-const Layout_3_9Example = require('../../layouts/layout-3-9/styleguide')
-const Layout_12Example = require('../../layouts/layout-12/styleguide')
-const Grid_3Example = require('../../grids/grid-3/styleguide')
-const Grid_4Example = require('../../grids/grid-4/styleguide')
-const EventsPageExample = require('../events-page/styleguide')
 
 const Styleguide = React.createClass({
-  items: [
-    EventPromoExample,
-    SampleComponentExample,
-    SideNavExample,
-    Layout_3_9Example,
-    Layout_12Example,
-    Grid_3Example,
-    Grid_4Example,
-    EventsPageExample
-  ],
-
-  getFilteredItems() {
-    if (this.props.children) {
-      return [this.props.children]
-    }
-
-    const itemId = this.props.params.id
-
-    if (!itemId) return this.items
-
-    const itemArray = this.items.filter((item) => {
-      return item.styleguide.urlTitle === itemId
-    })
-
-    if (itemArray.length < 1) return this.items
-
-    return itemArray
-  },
-
   getItemsByType(type) {
-    return this.items.filter((item) => {
+    return this.props.route.items.filter((item) => {
       return item.styleguide.type === type
     })
   },

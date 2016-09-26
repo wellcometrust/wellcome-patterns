@@ -2,6 +2,7 @@ const React = require('react')
 
 const About = () => (
   <div className="styleguide__about">
+    <h2>About</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsum fugit soluta praesentium, nobis quibusdam. Labore fugit pariatur eligendi, atque quo cupiditate quibusdam quas fuga tempore ab, explicabo distinctio velit!
     </p>
     <p>Eaque fugiat porro magnam dolore cumque, provident repellendus molestias vel debitis sed sunt quam rem dolores voluptate a molestiae ducimus inventore officiis ea error praesentium maiores temporibus vitae. Quod, odio!
@@ -16,10 +17,5 @@ const About = () => (
     </p>
   </div>
 )
-
-About.styleguide = {
-  title: 'About',
-  hideDetails: true
-}
 
 module.exports = About

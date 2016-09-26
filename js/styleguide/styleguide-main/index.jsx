@@ -1,5 +1,4 @@
 const React = require('react')
-const StyleguideItemWrapper = require('../../styleguide/styleguide-item-wrapper/index')
 
 const StyleguideMain = React.createClass({
   getInitialState() {
@@ -31,20 +30,3 @@ const StyleguideMain = React.createClass({
 })
 
 module.exports = StyleguideMain
-
-// {this.props.items.map((item) => {
-//           const itemType = item.type
-//           let itemToRender
-
-//           if (itemType) {
-//             itemToRender = item
-//           } else {
-//             itemToRender = React.createElement(item)
-//           }
-
-//           return (
-//             <StyleguideItemWrapper key={item}>
-//               {itemToRender}
-//             </StyleguideItemWrapper>
-//           )
-//         })}

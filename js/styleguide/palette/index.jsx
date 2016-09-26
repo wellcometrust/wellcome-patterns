@@ -31,14 +31,12 @@ const Palette = React.createClass({
 
   render() {
     return (
-      <div className="styleguide__palette" ref='styleguide__palette'></div>
+      <div className="styleguide__palette-wrap">
+        <h2>Palette</h2>
+        <div className="styleguide__palette" ref='styleguide__palette'></div>
+      </div>
     )
   }
 })
-
-Palette.styleguide = {
-  title: 'Palette',
-  hideDetails: true
-}
 
 module.exports = Palette

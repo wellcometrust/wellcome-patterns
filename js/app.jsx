@@ -15,8 +15,8 @@ const EventsPageExample = require('./templates/events-page/styleguide')
 
 // Templates
 const Styleguide = require('./templates/styleguide/index')
-const Palette = require('./styleguide/palette/styleguide')
-const About = require('./styleguide/about/styleguide')
+const Palette = require('./styleguide/palette/index')
+const About = require('./styleguide/about/index')
 const StyleguideItemWrapper = require('./styleguide/styleguide-item-wrapper/index')
 
 const App = React.createClass({
@@ -36,13 +36,13 @@ const App = React.createClass({
       return item.styleguide.urlTitle === nextState.params.id
     })
 
-    cb(null, (props) => <StyleguideItemWrapper {...props} item={item[0]} />);
+    cb(null, (props) => <StyleguideItemWrapper {...props} item={item[0]} />)
   },
 
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Styleguide}>
+        <Route path="/" component={Styleguide} items={this.items}>
           <IndexRoute component={About} />
           <Route path="/items/:id" getComponent={this.setItem} />
           <Route path="/palette" component={Palette} />
