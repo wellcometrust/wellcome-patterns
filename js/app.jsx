@@ -3,22 +3,28 @@ const React = require('react')
 const ReactDOM = require('react-dom')
 const { Router, Route, IndexRoute, hashHistory } = require('react-router')
 
-// Items
+// Styleguide
+const About = require('./styleguide/styleguide-about/index')
+const Styleguide = require('./styleguide/styleguide-base/index')
+const StyleguideGroup = require('./styleguide/styleguide-group/index')
+const StyleguideItemWrapper = require('./styleguide/styleguide-item-wrapper/index')
+const Palette = require('./styleguide/styleguide-palette/index')
+
+// Components
 const EventPromoExample = require('./components/event-promo/styleguide')
 const SampleComponentExample = require('./components/sample-component/styleguide')
 const SideNavExample = require('./components/side-nav/styleguide')
+
+// Layouts
 const Layout_3_9Example = require('./layouts/layout-3-9/styleguide')
 const Layout_12Example = require('./layouts/layout-12/styleguide')
+
+// Grids
 const Grid_3Example = require('./grids/grid-3/styleguide')
 const Grid_4Example = require('./grids/grid-4/styleguide')
-const EventsPageExample = require('./templates/events-page/styleguide')
 
-// Styleguide
-const Styleguide = require('./templates/styleguide/index')
-const Palette = require('./styleguide/palette/index')
-const About = require('./styleguide/about/index')
-const StyleguideItemWrapper = require('./styleguide/styleguide-item-wrapper/index')
-const StyleguideGroup = require('./styleguide/styleguide-group/index')
+// Templates
+const EventsPageExample = require('./templates/events-page/styleguide')
 
 const App = React.createClass({
   items: [
@@ -33,11 +39,11 @@ const App = React.createClass({
   ],
 
   getItem(nextState, cb) {
-    const item = this.items.filter((item) => {
+    const itemArray = this.items.filter((item) => {
       return item.styleguide.urlTitle === nextState.params.id
     })
 
-    cb(null, (props) => <StyleguideItemWrapper {...props} item={item[0]} />)
+    cb(null, (props) => <StyleguideItemWrapper {...props} item={itemArray[0]} />)
   },
 
   getType(nextState, cb) {

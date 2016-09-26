@@ -1,7 +1,7 @@
 {
-  "name": "react-bootstrap",
+  "name": "wellcome-patterns",
   "version": "1.0.0",
-  "description": "Starter React repo",
+  "description": "Wellcome Collection pattern library",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
