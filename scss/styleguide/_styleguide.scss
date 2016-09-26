@@ -18,6 +18,24 @@ html,
   margin-bottom: .5em;
 }
 
+.styleguide__logo-wrap {
+  @include clearfix;
+  color: colour('charcoal');
+
+  span {
+    @include font('mono', 'medium');
+    margin-left: 12px;
+    float: left;
+    width: 160px;
+  }
+}
+
+.styleguide__logo {
+  float: left;
+  width: 1.5em;
+  height: 1.5em;
+}
+
 .styleguide__subheading {
   cursor: pointer;
   position: relative;

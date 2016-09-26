@@ -17,17 +17,27 @@ h6 {
 }
 
 h1 {
-  @include font-size('xlarge');
+  @include font-size('xxlarge');
 }
 
 h2 {
-  @include font-size('large');
+  @include font-size('xlarge');
 }
 
 h3 {
-  @include font-size('medium');
+  @include font-size('large');
 }
 
 p {
   margin-bottom: 1em;
+}
+
+strong,
+b {
+  @include font-weight('bold');
+}
+
+em,
+i {
+  font-style: italic;
 }

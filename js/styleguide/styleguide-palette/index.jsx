@@ -32,7 +32,7 @@ const Palette = React.createClass({
   render() {
     return (
       <div className="styleguide__palette-wrap">
-        <h2>Palette</h2>
+        <h2 className="styleguide-item-wrapper__item-heading">Palette</h2>
         <div className="styleguide__palette" ref='styleguide__palette'></div>
       </div>
     )

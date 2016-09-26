@@ -45,7 +45,7 @@ const StyleguideItemWrapper = React.createClass({
             </h3>
           </div>
           <div className="styleguide-item-wrapper__body">
-            <h4 className="styleguide-item-wrapper__item-heading">{styleguide.title}</h4>
+            <h4 className="styleguide-item-wrapper__details-heading">{styleguide.title}</h4>
             <div className="styleguide-item-wrapper__description">
               <p>{styleguide.description}</p>
             </div>

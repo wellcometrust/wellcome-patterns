@@ -1,6 +1,7 @@
 const React = require('react')
 const StyleguideSubheading = require('../styleguide-subheading/index')
 const { Link } = require('react-router')
+const SvgIcon = require('../../components/svg-icon')
 
 const StyleguideSidebar = React.createClass({
   getInitialState() {
@@ -40,7 +41,10 @@ const StyleguideSidebar = React.createClass({
     return (
       <div className="styleguide__sidebar">
         <h1 className="styleguide__heading">
-          <Link className="link" to="/">Wellcome Patterns</Link>
+          <Link className="styleguide__logo-wrap" to="/">
+            <SvgIcon className="styleguide__logo" name="wellcome-logo" />
+            <span>Pattern library</span>
+          </Link>
         </h1>
 
         <section className="styleguide__standalone">
@@ -51,6 +55,9 @@ const StyleguideSidebar = React.createClass({
           <Link activeClassName="is-active"
             className="styleguide__link styleguide__link--standalone"
             to="/palette">Palette</Link>
+          <Link activeClassName="is-active"
+            className="styleguide__link styleguide__link--standalone"
+            to="/typography">Typography</Link>
         </section>
 
         {this.itemTypes.map((type) => {

@@ -8,6 +8,7 @@ const About = require('./styleguide/styleguide-about/index')
 const Styleguide = require('./styleguide/styleguide-base/index')
 const StyleguideGroup = require('./styleguide/styleguide-group/index')
 const StyleguideItemWrapper = require('./styleguide/styleguide-item-wrapper/index')
+const Typography = require('./styleguide/styleguide-typography/index')
 const Palette = require('./styleguide/styleguide-palette/index')
 
 // Components
@@ -60,6 +61,7 @@ const App = React.createClass({
         <Route path="/" component={Styleguide} items={this.items}>
           <IndexRoute component={About} />
           <Route path="/palette" component={Palette} />
+          <Route path="/typography" component={Typography} />
           <Route path="/:type" getComponent={this.getType} />
           <Route path="/items/:id" getComponent={this.getItem} />
         </Route>
