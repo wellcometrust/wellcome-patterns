@@ -11,10 +11,6 @@ const Grid_4Example = require('../../grids/grid-4/styleguide')
 const EventsPageExample = require('../events-page/styleguide')
 
 const Styleguide = React.createClass({
-  propTypes: {
-    params: React.PropTypes.object
-  },
-
   items: [
     EventPromoExample,
     SampleComponentExample,
@@ -63,7 +59,7 @@ const Styleguide = React.createClass({
           components={this.getItemsByType('component')}
           grids={this.getItemsByType('grid')}
           templates={this.getItemsByType('template')} />
-        <StyleguideMain items={this.getFilteredItems()} />
+        <StyleguideMain item={this.props.children} />
       </div>
     )
   }

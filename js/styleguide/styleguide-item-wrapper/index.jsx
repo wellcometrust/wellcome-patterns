@@ -5,10 +5,6 @@ const StyleguideItemWrapper = React.createClass({
     return {isShowingDetails: false}
   },
 
-  propTypes: {
-    children: React.PropTypes.node
-  },
-
   toggleDetails() {
     this.setState({isShowingDetails: !this.state.isShowingDetails})
   },
@@ -18,7 +14,8 @@ const StyleguideItemWrapper = React.createClass({
   },
 
   render() {
-    const styleguide = this.props.children.type.styleguide
+    const itemElement = React.createElement(this.props.item)
+    const styleguide = itemElement.type.styleguide
     let jsonSection
 
     if (styleguide.json) {
@@ -55,9 +52,9 @@ const StyleguideItemWrapper = React.createClass({
 
     return (
       <div className="styleguide-item-wrapper">
-        <h2 className="styleguide-item-wrapper__item-heading">{styleguide.title}</h2>
+        <h2 className="styleguide-item-wrapper__item-heading">title</h2>
         <div className="styleguide-item-wrapper__component">
-          {this.props.children}
+          {itemElement}
         </div>
         {styleguideItemDetails}
       </div>

@@ -6,10 +6,6 @@ const StyleguideMain = React.createClass({
     return {isFullScreen: false}
   },
 
-  propTypes: {
-    items: React.PropTypes.array.isRequired
-  },
-
   toggleFullScreen() {
     this.setState({isFullScreen: !this.state.isFullScreen})
   },
@@ -28,25 +24,27 @@ const StyleguideMain = React.createClass({
             <span />
           </a>
         </nav>
-        {this.props.items.map((item) => {
-          const itemType = item.type
-          let itemToRender
-
-          if (itemType) {
-            itemToRender = item
-          } else {
-            itemToRender = React.createElement(item)
-          }
-
-          return (
-            <StyleguideItemWrapper key={item}>
-              {itemToRender}
-            </StyleguideItemWrapper>
-          )
-        })}
+        {this.props.item}
       </div>
     )
   }
 })
 
 module.exports = StyleguideMain
+
+// {this.props.items.map((item) => {
+//           const itemType = item.type
+//           let itemToRender
+
+//           if (itemType) {
+//             itemToRender = item
+//           } else {
+//             itemToRender = React.createElement(item)
+//           }
+
+//           return (
+//             <StyleguideItemWrapper key={item}>
+//               {itemToRender}
+//             </StyleguideItemWrapper>
+//           )
+//         })}
