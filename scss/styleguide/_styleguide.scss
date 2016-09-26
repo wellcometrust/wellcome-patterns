@@ -23,8 +23,9 @@ html,
   color: colour('charcoal');
 
   span {
-    @include font('mono', 'medium');
+    @include font('mono', 'medium', 'ultra-bold');
     margin-left: 12px;
+    margin-top: .2em;
     float: left;
     width: 160px;
   }

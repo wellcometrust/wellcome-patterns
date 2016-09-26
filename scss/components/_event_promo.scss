@@ -8,8 +8,7 @@
 }
 
 .event-promo__title {
-  font-weight: bold;
-  line-height: 1.25;
+  @include font('helvetica', 'medium', 'bold');
   margin-bottom: 1em;
 }
 
@@ -39,7 +38,7 @@
 }
 
 .event-promo__type:before {
-  background: colour('mist');
+  background: colour('light-grey');
 }
 
 .event-promo__spaces:before {
@@ -47,7 +46,7 @@
 }
 
 .event-promo__date-time {
-  font-weight: bold;
+  @include font('helvetica', 'small', 'bold');
   margin-bottom: .8em;
 }
 

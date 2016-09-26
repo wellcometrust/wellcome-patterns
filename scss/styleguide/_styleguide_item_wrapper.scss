@@ -11,11 +11,10 @@
 }
 
 .styleguide-item-wrapper__item-heading {
-  @include font('mono', 'medium');
-  padding-bottom: .1em;
+  @include font('mono', 'medium', 'bold');
   display: inline-block;
   color: colour('charcoal');
-  border-bottom: 2px solid colour('charcoal');
+  border-bottom: 3px solid colour('charcoal');
 }
 
 .styleguide-item-wrapper__body {

@@ -9,23 +9,22 @@ const Typography = () => (
       <h3>Heading three</h3>
       <h4>Heading four</h4>
       <p>Body copy, lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ipsum fugit <a href="#">a default link</a> soluta praesentium, nobis quibusdam. Labore fugit pariatur some <strong>strong text</strong> eligendi, atque quo cupiditate quibusdam quas fuga tempore ab, explicabo distinctio velit! And some <em>emphasised</em> text.</p>
-      <h2>Unordered list</h2>
-      <p>
-        <ul>
-          <li>item one</li>
-          <li>item two</li>
-          <li>item three</li>
-          <li>item four</li>
-        </ul>
 
-        <h2>Ordered list</h2>
-        <ol>
-          <li>item one</li>
-          <li>item two</li>
-          <li>item three</li>
-          <li>item four</li>
-        </ol>
-      </p>
+      <h2>Unordered list</h2>
+      <ul>
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+        <li>item four</li>
+      </ul>
+
+      <h2>Ordered list</h2>
+      <ol>
+        <li>item one</li>
+        <li>item two</li>
+        <li>item three</li>
+        <li>item four</li>
+      </ol>
     </div>
   </div>
 )

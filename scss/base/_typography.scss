@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  @include font('helvetica', 'small', 'light');
+  @include font('helvetica', 'small');
+  letter-spacing: .04em;
 }
 
 h1,
