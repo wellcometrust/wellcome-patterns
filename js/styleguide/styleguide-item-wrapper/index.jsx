@@ -1,6 +1,10 @@
 const React = require('react')
 
 const StyleguideItemWrapper = React.createClass({
+  propTypes: {
+    item: React.PropTypes.func
+  },
+
   getInitialState() {
     return {isShowingDetails: false}
   },

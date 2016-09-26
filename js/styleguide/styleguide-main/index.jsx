@@ -1,6 +1,10 @@
 const React = require('react')
 
 const StyleguideMain = React.createClass({
+  propTypes: {
+    item: React.PropTypes.object
+  },
+
   getInitialState() {
     return {isFullScreen: false}
   },

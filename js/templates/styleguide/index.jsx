@@ -3,6 +3,11 @@ const StyleguideSidebar = require('../../styleguide/styleguide-sidebar/index')
 const StyleguideMain = require('../../styleguide/styleguide-main/index')
 
 const Styleguide = React.createClass({
+  propTypes: {
+    route: React.PropTypes.object,
+    children: React.PropTypes.object
+  },
+
   getItemsByType(type) {
     return this.props.route.items.filter((item) => {
       return item.styleguide.type === type
