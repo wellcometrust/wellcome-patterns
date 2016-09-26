@@ -8,8 +8,10 @@
     "test": "mocha --require test/helpers/setup.js",
     "build:js": "webpack",
     "watch:js": "webpack --watch",
-    "build:scss": "node-sass --output-style compressed scss/application.scss > dist/assets/css/application.css",
-    "watch:scss": "onchange 'scss/**/*.scss' -- npm run build:scss"
+    "build:app:scss": "node-sass --output-style compressed scss/application.scss > dist/assets/css/application.css",
+    "build:styleguide:scss": "node-sass --output-style compressed scss/styleguide.scss > dist/assets/css/styleguide.css",
+    "watch:app:scss": "onchange 'scss/**/*.scss' -- npm run build:app:scss",
+    "watch:styleguide:scss": "onchange 'scss/**/*.scss' -- npm run build:styleguide:scss"
   },
   "author": "David McCormick <d.mccormick@wellcome.ac.uk>",
   "license": "MIT",

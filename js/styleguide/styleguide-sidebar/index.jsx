@@ -44,11 +44,11 @@ const StyleguideSidebar = React.createClass({
         </h1>
 
         <section className="styleguide__standalone">
-          <Link activeClassName="active"
+          <Link activeClassName="is-active"
             onlyActiveOnIndex
             className="styleguide__link styleguide__link--standalone"
             to="/">About</Link>
-          <Link activeClassName="active"
+          <Link activeClassName="is-active"
             className="styleguide__link styleguide__link--standalone"
             to="/palette">Palette</Link>
         </section>
@@ -63,7 +63,7 @@ const StyleguideSidebar = React.createClass({
               <ul className="styleguide__list">
                 <li className="styleguide__item">
                   <Link className="styleguide__link"
-                    activeClassName="active"
+                    activeClassName="is-active"
                     to={type.toLowerCase()}>All {type}</Link>
                 </li>
                 {this.props[`${type.toLowerCase()}`].map((itemType) => {
@@ -71,7 +71,7 @@ const StyleguideSidebar = React.createClass({
                     <li key={itemType}
                       className="styleguide__item">
                       <Link className="styleguide__link"
-                        activeClassName="active"
+                        activeClassName="is-active"
                         to={`/items/${itemType.styleguide.urlTitle}`}>{itemType.styleguide.title}</Link>
                     </li>
                   )

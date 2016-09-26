@@ -14,7 +14,7 @@ const StyleguideMain = React.createClass({
   },
 
   getFullScreen() {
-    return this.state.isFullScreen ? 'styleguide__main--is-fullscreen' : ''
+    return this.state.isFullScreen ? 'is-fullscreen' : ''
   },
 
   render() {
