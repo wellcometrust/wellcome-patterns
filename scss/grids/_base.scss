@@ -11,7 +11,6 @@
 
 .grid__cell {
   @include column;
-
   margin-bottom: vertical-space(2);
 
   .grid--is-gutter-narrow & {

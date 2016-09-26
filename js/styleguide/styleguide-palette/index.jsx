@@ -24,7 +24,7 @@ const Palette = React.createClass({
     pairArray.forEach(function(pair) {
       palette_element.innerHTML += `
       <div class="styleguide__hex" style="background: ${pair.hex};">
-        <span class="styleguide__colour">${pair.name}</span>
+        <span class="styleguide__colour">${pair.name}: <code class="styleguide__code">${pair.hex}</code></span>
       </div>`
     })
   },

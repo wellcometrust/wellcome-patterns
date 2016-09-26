@@ -1,0 +1,18 @@
+.row {
+  margin: 0 auto;
+  padding: vertical-space(4) 0;
+  overflow: hidden;
+
+  &--dark-grey {
+    background: colour('dark-grey');
+  }
+
+  &--inverse {
+    color: colour('white');
+  }
+
+  &--no-padding{
+    padding: 0;
+  }
+}
+
