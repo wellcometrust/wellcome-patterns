@@ -29,7 +29,8 @@ $breakpoints: (
 );
 
 $font-families: (
-  'helvetica': ('helvetica neue' helvetica, Arial, sans-serif)
+  'helvetica': ('helvetica neue', helvetica, Arial, sans-serif),
+  'mono': ('source code pro', courier, monospace)
 );
 
 $font-weights: (
@@ -41,11 +42,11 @@ $font-weights: (
 
 $font-sizes: (
   'xsmall': (font-size: 14, line-height: 1.333),
-  'small': (font-size: 18, line-height: 1.8),
-  'medium': (font-size: 24, line-height: 1.4),
-  'large': (font-size: 30, line-height: 1.25),
-  'xlarge': (font-size: 34, line-height: 1.2),
-  'xxlarge': (font-size: 39, line-height: 1.1)
+  'small': (font-size: 16, line-height: 1.4, letter-spacing: .03em),
+  'medium': (font-size: 22, line-height: 1),
+  'large': (font-size: 26, line-height: 1),
+  'xlarge': (font-size: 34, line-height: 1),
+  'xxlarge': (font-size: 40, line-height: 1)
 );
 
 // Empty map for respond-to mixin

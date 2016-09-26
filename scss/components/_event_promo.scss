@@ -14,9 +14,9 @@
 }
 
 .event-promo__meta {
+  @include font-weight('bold');
+  @include font-size('xsmall');
   margin-bottom: .8em;
-  font-size: .8em;
-  font-weight: bold;
 }
 
 .event-promo__type,

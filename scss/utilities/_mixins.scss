@@ -39,6 +39,10 @@
   $size: map-get($font-size-properties, font-size);
 }
 
+@mixin font-weight($font-weight) {
+  font-weight: map-get($font-weights, $font-weight);
+}
+
 @mixin font-family($font-cut, $important: false) {
   $font-family: map-get($font-families, $font-cut);
 
@@ -59,7 +63,6 @@
   @if $font-size-properties {
     @include font-size(map-get($font-size-properties, font-size));
   } @else {
-    font-size: #{$size}px;
     font-size: #{$size / 10}rem;
   }
 }

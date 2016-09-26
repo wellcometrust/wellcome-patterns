@@ -1,8 +1,9 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
-  line-height: 1.25;
-  font-weight: 300;
-  letter-spacing: .03em;
+  @include font('helvetica', 'small', 'light');
 }
 
 h1,
@@ -11,20 +12,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
-  margin-bottom: .3em;
+  @include font('helvetica', 'medium', 'bold');
+  margin-bottom: .6em;
 }
 
 h1 {
-  font-size: 1.5em;
+  @include font-size('xlarge');
 }
 
 h2 {
-  font-size: 1.2em;
+  @include font-size('large');
 }
 
 h3 {
-  font-size: 1.1em;
+  @include font-size('medium');
 }
 
 p {

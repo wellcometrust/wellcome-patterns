@@ -14,7 +14,6 @@ html,
 }
 
 .styleguide__heading {
-  line-height: 1;
   padding: 15px;
   margin-bottom: .5em;
 }
@@ -42,7 +41,7 @@ html,
 }
 
 .styleguide__main {
-  padding: 55px 15px 15px;
+  padding: 60px 15px 15px;
   position: absolute;
   left: 270px;
   overflow-y: scroll;
@@ -107,8 +106,8 @@ html,
 }
 
 .styleguide__item {
-  font-size: .9em;
-  margin: 0 0 .6em 2em;
+  @include font-size('xsmall');
+  margin: 0 0 .4em 2em;
 
   &:last-child {
     margin-bottom: 1.6em;
