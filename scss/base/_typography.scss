@@ -4,6 +4,7 @@ html {
 
 body {
   @include font('sans', 'small');
+  letter-spacing: .04em;
 }
 
 h1,

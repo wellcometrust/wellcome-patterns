@@ -30,7 +30,6 @@
 
 @mixin font($font-cut, $font-size, $font-weight: 'regular') {
   $font-size-properties: map-get($font-sizes, $font-size);
-  $tweaks: map-get($font-tweaks, #{$font-cut}-#{$font-size});
 
   @include font-size(map-get($font-size-properties, font-size));
 
@@ -38,12 +37,6 @@
   line-height: map-get($font-size-properties, line-height);
   font-weight: map-get($font-weights, $font-weight);
   $size: map-get($font-size-properties, font-size);
-
-  @if $tweaks {
-    @each $tweak-property, $tweak-value in $tweaks {
-      #{$tweak-property}: #{$tweak-value};
-    }
-  }
 }
 
 @mixin font-weight($font-weight) {
