@@ -10,7 +10,7 @@
 }
 
 .event-promo__title {
-  @include font('helvetica', 'medium', 'bold');
+  @include font('sans', 'medium', 'bold');
   margin-bottom: 1em;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .event-promo__date-time {
-  @include font('helvetica', 'small', 'bold');
+  @include font('sans', 'small', 'bold');
   margin-bottom: .8em;
 }
 

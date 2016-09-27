@@ -3,8 +3,7 @@ html {
 }
 
 body {
-  @include font('helvetica', 'small');
-  letter-spacing: .04em;
+  @include font('sans', 'small');
 }
 
 h1,
@@ -13,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include font('helvetica', 'medium', 'bold');
+  @include font('sans', 'medium', 'bold');
   margin-bottom: .6em;
 }
 
@@ -29,16 +28,64 @@ h3 {
   @include font-size('large');
 }
 
-p {
-  margin-bottom: 1em;
+a {
+  color: inherit;
+  text-decoration: underline;
 }
 
-strong,
-b {
-  @include font-weight('bold');
+p {
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:empty {
+    display: none;
+  }
+}
+
+ul,
+ol {
+  margin: .5em 0 1.7em 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: .1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 em,
 i {
   font-style: italic;
+
+  strong,
+  b {
+    @include font-weight('bold');
+  }
+}
+
+strong,
+b {
+  @include font-weight('bold');
+
+  em,
+  i {
+    font-style: italic;
+  }
 }

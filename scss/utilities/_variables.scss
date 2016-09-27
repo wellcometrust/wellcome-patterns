@@ -29,7 +29,7 @@ $breakpoints: (
 );
 
 $font-families: (
-  'helvetica': ('helvetica neue', helvetica, Arial, sans-serif),
+  'sans': ('helvetica neue', helvetica, Arial, sans-serif),
   'mono': ('source code pro', courier, monospace)
 );
 
@@ -47,6 +47,10 @@ $font-sizes: (
   'large': (font-size: 26, line-height: 1.2),
   'xlarge': (font-size: 34, line-height: 1),
   'xxlarge': (font-size: 40, line-height: 1)
+);
+
+$font-tweaks: (
+  'sans-small': (letter-spacing: .04em)
 );
 
 // Empty map for respond-to mixin
