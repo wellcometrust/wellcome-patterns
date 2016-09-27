@@ -15,6 +15,7 @@
   display: inline-block;
   color: colour('charcoal');
   border-bottom: 3px solid colour('charcoal');
+  margin-bottom: 1em;
 }
 
 .styleguide-item-wrapper__body {
@@ -69,10 +70,6 @@
   .styleguide-item-wrapper__details.is-active & {
     transform: rotate(90deg);
   }
-}
-
-.styleguide-item-wrapper__item-heading {
-  margin-bottom: 1em;
 }
 
 .styleguide-item-wrapper__description {

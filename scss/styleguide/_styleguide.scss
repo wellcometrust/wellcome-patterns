@@ -1,10 +1,10 @@
 body,
 html,
-#app {
+.app {
   height: 100%;
 }
 
-#app {
+.app {
   position: relative;
 }
 
@@ -137,7 +137,6 @@ html,
   display: block;
   text-decoration: none;
   padding-right: 10px;
-  transition: background 600ms ease;
   color: colour('granite');
   border-bottom: 0;
   transition: color 200ms ease;
@@ -164,9 +163,11 @@ html,
 
 @function colour-list($colours) {
   $list: null;
+
   @each $colour in $colours {
     $list: append($list, $colour);
   }
+
   @return '#{$list}';
 }
 
@@ -178,7 +179,7 @@ html,
     height: 0;
     width: 0;
     overflow: hidden;
-    content: colour-list($colours)
+    content: colour-list($colours);
   }
 }
 

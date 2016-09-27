@@ -1,3 +1,5 @@
+//* @define grid; weak
+
 .grid {
   @include clearfix;
   margin-left: -$gutter-width / 2;

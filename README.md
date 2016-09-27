@@ -4,7 +4,7 @@
 - `git clone https://github.com/wellcometrust/wellcome-patterns.git`
 
 ## Install dependencies
-- `cd {THIS_REPO_NAME}
+- `cd wellcome-patterns`
 - `npm install`
 
 ## Build the assets
