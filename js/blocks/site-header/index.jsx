@@ -8,6 +8,10 @@ const SiteHeader = React.createClass({
     }
   },
 
+  propTypes: {
+    setIsOverlayed: React.PropTypes.func
+  },
+
   handleSearchChange(event) {
     this.setState({searchText: event.target.value})
   },
@@ -16,6 +20,7 @@ const SiteHeader = React.createClass({
     event.preventDefault()
     this.setState({isFormActive: !this.state.isFormActive})
     this.refs.inputNode.focus()
+    this.props.setIsOverlayed(!this.state.isFormActive)
   },
 
   getFormActive() {
@@ -38,7 +43,7 @@ const SiteHeader = React.createClass({
               <a className="site-header__link" href="#">Visit us</a>
             </li>
             <li className="site-header__item">
-              <a className="site-header__link" href="#">Whats on</a>
+              <a className="site-header__link is-active" href="#">What&apos;s on</a>
             </li>
             <li className="site-header__item">
               <a className="site-header__link" href="#">Explore</a>

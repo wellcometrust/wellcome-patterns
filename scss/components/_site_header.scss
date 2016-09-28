@@ -4,7 +4,7 @@
   @include clearfix;
   position: relative;
   padding: 10px 0;
-  border-bottom: 3px solid colour('black');
+  border-bottom: 2px solid colour('black');
 }
 
 .site-header__logo {
@@ -52,7 +52,7 @@
 }
 
 .site-header__list {
-  @extend %plain-list;
+  @include plain-list();
   float: left;
   padding-right: 3em;
 }
@@ -60,7 +60,7 @@
 .site-header__item {
   @include font('sans', 'medium', 'bold');
   float: left;
-  margin-right: 1em;
+  margin-right: .8em;
   text-transform: uppercase;
 
   &:last-child {
@@ -69,7 +69,11 @@
 }
 
 .site-header__link {
-  @extend %link;
+  @include link($is-hover-only: true);
+
+  &.is-active {
+    border-bottom: 4px solid colour('mid-grey');
+  }
 }
 
 .site-header__form {

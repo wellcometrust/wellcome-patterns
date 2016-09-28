@@ -6,7 +6,7 @@
 }
 
 .event-promo__link {
-  @extend %link;
+  @include link();
 }
 
 .event-promo__title {
@@ -64,6 +64,6 @@
   font-weight: bold;
 
   a {
-    @extend %link;
+    @include link();
   }
 }

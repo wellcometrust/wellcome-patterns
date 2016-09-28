@@ -1,7 +1,7 @@
 //* @define side-nav; weak
 
 .side-nav__list {
-  @extend %plain-list;
+  @include plain-list();
 }
 
 .side-nav__item {
