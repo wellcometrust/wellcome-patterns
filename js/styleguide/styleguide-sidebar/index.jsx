@@ -6,6 +6,7 @@ const SvgIcon = require('../../components/svg-icon')
 const StyleguideSidebar = React.createClass({
   getInitialState() {
     return {
+      isBlocksActive: false,
       isComponentsActive: false,
       isLayoutsActive: false,
       isGridsActive: false,
@@ -13,10 +14,13 @@ const StyleguideSidebar = React.createClass({
     }
   },
 
-  itemTypes: ['Components', 'Layouts', 'Grids', 'Templates'],
+  itemTypes: ['Blocks', 'Components', 'Layouts', 'Grids', 'Templates'],
 
   toggleActive(type) {
     switch (type) {
+      case 'Blocks':
+        this.setState({isBlocksActive: !this.state.isBlocksActive})
+        break
       case 'Components':
         this.setState({isComponentsActive: !this.state.isComponentsActive})
         break

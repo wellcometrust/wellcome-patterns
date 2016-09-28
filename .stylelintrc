@@ -13,6 +13,7 @@
         "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
       },
       "ignoreSelectors": [
+        ".*\\.is-.*",
         ".*\\.no-js.*",
         ".*\\.lt-ie.*"
       ]

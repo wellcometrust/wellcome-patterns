@@ -20,6 +20,7 @@ const Styleguide = React.createClass({
       <div className="styleguide">
         <StyleguideIcons />
         <StyleguideSidebar
+          blocks={this.getItemsByType('block')}
           layouts={this.getItemsByType('layout')}
           components={this.getItemsByType('component')}
           grids={this.getItemsByType('grid')}
