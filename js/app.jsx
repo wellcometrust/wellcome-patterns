@@ -11,6 +11,9 @@ const StyleguideItemWrapper = require('./styleguide/styleguide-item-wrapper/inde
 const Typography = require('./styleguide/styleguide-typography/index')
 const Palette = require('./styleguide/styleguide-palette/index')
 
+// Blocks
+const SiteHeaderExample = require('./blocks/site-header/styleguide')
+
 // Components
 const EventPromoExample = require('./components/event-promo/styleguide')
 const SampleComponentExample = require('./components/sample-component/styleguide')
@@ -29,6 +32,7 @@ const EventsPageExample = require('./templates/events-page/styleguide')
 
 const App = React.createClass({
   items: [
+    SiteHeaderExample,
     EventPromoExample,
     SampleComponentExample,
     SideNavExample,
