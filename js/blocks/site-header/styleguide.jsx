@@ -2,7 +2,9 @@ const React = require('react')
 const SiteHeader = require('./')
 
 const SiteHeaderExample = () => (
-  <SiteHeader />
+  <SiteHeader setIsOverlayed={function() {
+    console.log('toggle overlay on base-layout__main')
+  }} />
 )
 
 SiteHeaderExample.styleguide = {

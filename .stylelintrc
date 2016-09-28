@@ -4,7 +4,8 @@
   ],
   "ignoreFiles": [
     "scss/vendor/**",
-    "scss/utilities/**"
+    "scss/utilities/**",
+    "scss/placeholders/**"
   ],
   "rules": {
     "plugin/selector-bem-pattern": {
