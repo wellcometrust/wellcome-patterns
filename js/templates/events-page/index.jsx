@@ -1,9 +1,9 @@
 const React = require('react')
+const BaseLayout = require('../../templates/base-layout/index')
 const Layout_3_9 = require('../../layouts/layout-3-9/index')
 const LayoutColumn = require('../../layouts/layout-column/index')
 const Grid_3 = require('../../grids/grid-3/index')
 const SideNav = require('../../components/side-nav/index')
-const Row = require('../../row/index')
 const EventPromo = require('../../components/event-promo/index')
 
 const EventsPage = React.createClass({
@@ -14,7 +14,7 @@ const EventsPage = React.createClass({
 
   render() {
     return (
-      <Row className="row--no-padding">
+      <BaseLayout>
         <Layout_3_9 isNarrow>
           <LayoutColumn number="1">
             <SideNav items={this.props.sideNavItems} />
@@ -27,7 +27,7 @@ const EventsPage = React.createClass({
             </Grid_3>
           </LayoutColumn>
         </Layout_3_9>
-      </Row>
+      </BaseLayout>
     )
   }
 })
