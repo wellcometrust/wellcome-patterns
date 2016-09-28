@@ -1,7 +1,10 @@
 dist/
+build/
 node_modules/
+.idea/
 .eslintcache
 coverage
 .nyc_output
 .DS_Store
 npm-debug.log
+*.iml

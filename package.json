@@ -4,15 +4,16 @@
   "description": "Wellcome Collection pattern library",
   "main": "index.js",
   "scripts": {
-    "install": "mkdir dist/ && mkdir dist/assets/ && mkdir dist/assets/js/ && mkdir dist/assets/css/",
+    "distdirs": "mkdir -p dist/assets/js/ && mkdir -p dist/assets/css/",
     "lint": "standard",
     "test": "mocha --require test/helpers/setup.js",
+    "build": "npm run distdirs && npm run build:js && npm run build:app:scss && npm run build:styleguide:scss",
     "build:js": "webpack",
     "watch:js": "webpack --watch",
-    "build:app:scss": "node-sass --output-style compressed scss/application.scss > dist/assets/css/application.css",
-    "build:styleguide:scss": "node-sass --output-style compressed scss/styleguide.scss > dist/assets/css/styleguide.css",
-    "watch:app:scss": "npm run build:app:scss && onchange 'scss/**/*.scss' -- npm run build:app:scss",
-    "watch:styleguide:scss": "npm run build:styleguide:scss && onchange 'scss/**/*.scss' -- npm run build:styleguide:scss"
+    "build:app:scss": "npm run distdirs && node-sass --output-style compressed scss/application.scss > dist/assets/css/application.css",
+    "build:styleguide:scss": "npm run distdirs && node-sass --output-style compressed scss/styleguide.scss > dist/assets/css/styleguide.css",
+    "watch:app:scss": "npm run distdirs && npm run build:app:scss && onchange 'scss/**/*.scss' -- npm run build:app:scss",
+    "watch:styleguide:scss": "npm run distdirs && npm run build:styleguide:scss && onchange 'scss/**/*.scss' -- npm run build:styleguide:scss"
   },
   "author": "David McCormick <d.mccormick@wellcome.ac.uk>",
   "license": "MIT",

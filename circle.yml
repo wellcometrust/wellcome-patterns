@@ -1,0 +1,12 @@
+machine:
+  node:
+    version: 6.1.0
+test:
+  post:
+    - ./build-ci.sh
+    - tar -cvf $CIRCLE_BUILD_NUM.tar build
+deployment:
+    prod:
+      branch: master
+      commands:
+        - aws s3 cp $CIRCLE_BUILD_NUM.tar s3://$CIRCLE_BUILD_BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/$CIRCLE_BUILD_NUM.tar
