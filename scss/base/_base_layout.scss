@@ -13,9 +13,10 @@
   z-index: -1;
   opacity: 0;
   background: colour('white');
-  transition: opacity 1000ms ease;
+  transition: opacity 1000ms ease, z-index 0ms 1000ms;
 
   .base-layout.is-overlayed & {
+    transition: opacity 1000ms ease, z-index 0ms 0ms;
     z-index: 1;
     opacity: .9;
   }
