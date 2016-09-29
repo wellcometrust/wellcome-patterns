@@ -9,6 +9,7 @@ const SiteHeader = React.createClass({
   },
 
   propTypes: {
+    isOverlayed: React.PropTypes.bool,
     setIsOverlayed: React.PropTypes.func
   },
 
@@ -16,17 +17,23 @@ const SiteHeader = React.createClass({
     this.setState({searchText: event.target.value})
   },
 
-  toggleNav(event) {
+  toggleSearch(event) {
     event.preventDefault()
     this.setState({isFormActive: !this.state.isFormActive})
     this.refs.inputNode.focus()
-    this.props.setIsOverlayed(!this.state.isFormActive)
+  },
+
+  toggleNav(event) {
+    event.preventDefault()
+    this.props.setIsOverlayed(!this.props.isOverlayed)
+  },
+
+  getNavActive() {
+    return this.props.isOverlayed ? 'is-active' : ''
   },
 
   getFormActive() {
-    if (!this.state.isFormActive) return
-
-    return 'is-active'
+    return this.state.isFormActive ? 'is-active' : ''
   },
 
   render() {
@@ -36,14 +43,14 @@ const SiteHeader = React.createClass({
           <img src="https://wellcomecollection.org/sites/all/themes/col_base/images/wellcomecollection-logo.svg" alt="Wellcome Collection" />
         </a>
         <p className="site-header__strapline">The free destination for the incurably curious</p>
-        <a href="#" className="site-header__nav-toggle">Menu</a>
-        <nav className="site-header__nav" aria-hidden="true">
+        <a href="#" className="site-header__nav-toggle" onClick={this.toggleNav}>Menu</a>
+        <nav className={`site-header__nav ${this.getNavActive()}`} aria-hidden="true">
           <ul className="site-header__list">
             <li className="site-header__item">
               <a className="site-header__link" href="#">Visit us</a>
             </li>
-            <li className="site-header__item">
-              <a className="site-header__link is-active" href="#">What&apos;s on</a>
+            <li className="site-header__item is-active">
+              <a className="site-header__link" href="#">What&apos;s on</a>
             </li>
             <li className="site-header__item">
               <a className="site-header__link" href="#">Explore</a>
@@ -56,7 +63,7 @@ const SiteHeader = React.createClass({
             <div className="site-header__input-wrap">
               <input ref="inputNode" className="site-header__input" placeholder="Search" type="text" name="search" value={this.state.searchText} onChange={this.handleSearchChange} />
             </div>
-            <div className="site-header__submit-wrap" onClick={this.toggleNav}>
+            <div className="site-header__submit-wrap" onClick={this.toggleSearch}>
               <input className="site-header__submit" title="search" type="image" alt="Search" name="submit" src="https://wellcomecollection.org/sites/all/themes/col_base/images/search.svg" />
             </div>
           </form>

@@ -25,9 +25,9 @@ const BaseLayout = React.createClass({
   render() {
     return (
       <div className={`base-layout ${this.getIsOverlayed()}`}>
-        <Row className="row--no-top-padding">
+        <Row className="row--no-top-padding row--overflow">
           <Layout_12 isNarrow>
-            <SiteHeader setIsOverlayed={this.setIsOverlayed} />
+            <SiteHeader isOverlayed={this.state.isOverlayed} setIsOverlayed={this.setIsOverlayed} />
           </Layout_12>
         </Row>
         <div className="base-layout__main" role="main">
