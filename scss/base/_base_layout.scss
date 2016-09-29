@@ -1,5 +1,9 @@
 //* @define base-layout; weak
 
+.base-layout {
+  overflow: hidden;
+}
+
 .base-layout__main {
   position: relative;
 }
@@ -19,5 +23,9 @@
     transition: opacity 1000ms ease, z-index 0ms 0ms;
     z-index: 1;
     opacity: .9;
+
+    @include respond-to('xlarge') {
+      display: none;
+    }
   }
 }
