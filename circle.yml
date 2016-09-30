@@ -8,4 +8,4 @@ deployment:
     prod:
       branch: master
       commands:
-        - aws s3 cp ./build/* s3://patterns.wellcome.ac.uk/ --recursive
+        - aws s3 cp ./build/* s3://patterns.wellcome.ac.uk --recursive
