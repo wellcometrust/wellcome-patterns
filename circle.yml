@@ -6,7 +6,7 @@ test:
     - ./build-ci.sh
 deployment:
     dev:
-      branch: *
+      branch: /.*/
       commands:
         - aws s3 cp ./build/* s3://patterns.wellcome.ac.uk/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/
     prod:
