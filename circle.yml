@@ -5,7 +5,7 @@ test:
   post:
     - ./build-ci.sh
 deployment:
-    prod:
+    dev:
       branch: *
       commands:
         - aws s3 cp ./build/* s3://$CIRCLE_BUILD_BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/
