@@ -4,6 +4,15 @@ provider "aws" {
   region     = "eu-west-1"
 }
 
+data "template_file" "website_bucket_write" {
+  template = "${file("write-bucket-policy.json")}"
+
+  vars {
+    circle_user = "${var.circle_user}",
+  }
+}
+
+
 resource "aws_s3_bucket" "wellcome_patterns" {
   bucket = "patterns.wellcome.ac.uk"
   acl = "public-read"
@@ -17,7 +26,7 @@ resource "aws_s3_bucket" "wellcome_patterns" {
 resource "aws_iam_user_policy" "website_bucket_write" {
   name = "website-bucket-write"
   user = "${aws_iam_user.circle_user.id}"
-  policy = "${file("write-bucket-policy.json")}"
+  policy = "${data.template_file.website_bucket_write.rendered}"
 }
 
 resource "aws_iam_access_key" "circle_user" {

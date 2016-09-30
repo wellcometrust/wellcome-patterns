@@ -8,7 +8,7 @@ deployment:
     dev:
       branch: /.*/
       commands:
-        - aws s3 cp ./build/* s3://patterns.wellcome.ac.uk/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/
+        - aws s3 cp ./build s3://patterns.wellcome.ac.uk/$CIRCLE_BRANCH/ --recursive
     prod:
       branch: master
       commands:
