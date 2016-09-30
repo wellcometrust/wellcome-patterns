@@ -4,9 +4,12 @@ machine:
 test:
   post:
     - ./build-ci.sh
-    - tar -cvf $CIRCLE_BUILD_NUM.tar build
 deployment:
+    prod:
+      branch: *
+      commands:
+        - aws s3 cp ./build/* s3://$CIRCLE_BUILD_BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/
     prod:
       branch: master
       commands:
-        - aws s3 cp $CIRCLE_BUILD_NUM.tar s3://$CIRCLE_BUILD_BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/$CIRCLE_BUILD_NUM.tar
+        - aws s3 cp ./build/* s3://$CIRCLE_BUILD_BUCKET/$CIRCLE_PROJECT_REPONAME/$CIRCLE_BRANCH/
