@@ -12,3 +12,7 @@
 
 ## Start a server
 - from the root of this repo, run a server (`python -m SimpleHTTPServer`)
+
+## Deploying
+Once you're happy with your changes, get a code review in. Once that's all good, merge to master and it will deploy
+automatically.
