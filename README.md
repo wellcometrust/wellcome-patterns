@@ -8,7 +8,7 @@
 - `npm install`
 
 ## Build the assets
-- `npm run watch:js` and (in a separate terminal) `npm run watch:styleguide:scss`
+- `npm run watch:all`
 
 ## Start a server
 - from the root of this repo, run a server (`python -m SimpleHTTPServer`)

@@ -13,7 +13,8 @@
     "build:app:scss": "npm run distdirs && node-sass --output-style compressed scss/application.scss > dist/assets/css/application.css",
     "build:styleguide:scss": "npm run distdirs && node-sass --output-style compressed scss/styleguide.scss > dist/assets/css/styleguide.css",
     "watch:app:scss": "npm run distdirs && npm run build:app:scss && onchange 'scss/**/*.scss' -- npm run build:app:scss",
-    "watch:styleguide:scss": "npm run distdirs && npm run build:styleguide:scss && onchange 'scss/**/*.scss' -- npm run build:styleguide:scss"
+    "watch:styleguide:scss": "npm run distdirs && npm run build:styleguide:scss && onchange 'scss/**/*.scss' -- npm run build:styleguide:scss",
+    "watch:all": "parallelshell 'npm run watch:js' 'npm run watch:styleguide:scss'"
   },
   "author": "David McCormick <d.mccormick@wellcome.ac.uk>",
   "license": "MIT",
@@ -46,6 +47,7 @@
     "node-sass": "^3.10.0",
     "nyc": "^6.0.0",
     "onchange": "^3.0.2",
+    "parallelshell": "^2.0.0",
     "react-addons-test-utils": "^0.14.7",
     "rsg-alt": "^3.15.0",
     "sinon": "^1.17.3",
